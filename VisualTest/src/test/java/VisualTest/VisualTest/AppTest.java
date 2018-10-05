@@ -1,4 +1,8 @@
 package VisualTest.VisualTest;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -20,13 +24,16 @@ public class AppTest
 
 	static WebDriver driver;
 	static Eyes eyes = new Eyes();
+	static Properties prop;
+	
 	@BeforeClass
 
-	public static void Setup() {
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\saranya_p\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	public static void Setup() throws IOException {
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\saranya_p\\Downloads\\chromedriver_win32\\chromedriver.exe");
 		driver = new ChromeDriver();
-		
+		Properties prop = new Properties();
+		FileInputStream fis = new FileInputStream("C:\\Users\\saranya_p\\git\\VisualTestRepo\\VisualTest\\Locators.Properties");
+		prop.load(fis);
 	}
 	@Test
 	public void Applitest() {
@@ -41,13 +48,14 @@ public class AppTest
 			eyes.open(driver, "Hello World!", "My first Selenium Java test!", new RectangleSize(800, 600));
 
 			// Navigate the browser to the "hello world!" web-site.
-			driver.get("https://applitools.com/helloworld");
+			driver.get("https://www.amazon.com/");
 
 			// Visual checkpoint #1.
 			eyes.checkWindow("Hello!");
 
 			// Click the "Click me!" button.
-			driver.findElement(By.tagName("button")).click();
+			driver.findElement(By.id(prop.getProperty("SearchTextBox"))).sendKeys("baby");
+			driver.findElement(By.xpath("//*[@id=\"nav-search\"]/form/div[2]/div/input")).click();
 
 			// Visual checkpoint #2.
 			eyes.checkWindow("Click!");
