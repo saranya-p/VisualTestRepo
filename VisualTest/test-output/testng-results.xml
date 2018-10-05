@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="39891" started-at="2018-10-05T10:47:55Z" finished-at="2018-10-05T10:48:35Z">
+  <suite name="Default suite" duration-ms="32873" started-at="2018-10-05T10:56:56Z" finished-at="2018-10-05T10:57:29Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="39891" started-at="2018-10-05T10:47:55Z" finished-at="2018-10-05T10:48:35Z">
+    <test name="Default test" duration-ms="32873" started-at="2018-10-05T10:56:56Z" finished-at="2018-10-05T10:57:29Z">
       <class name="VisualTest.VisualTest.AppTest">
-        <test-method status="PASS" signature="Setup()[pri:0, instance:VisualTest.VisualTest.AppTest@1f59a598]" name="Setup" is-config="true" duration-ms="2811" started-at="2018-10-05T10:47:55Z" finished-at="2018-10-05T10:47:58Z">
+        <test-method status="PASS" signature="Setup()[pri:0, instance:VisualTest.VisualTest.AppTest@1f59a598]" name="Setup" is-config="true" duration-ms="2827" started-at="2018-10-05T10:56:56Z" finished-at="2018-10-05T10:56:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method status="PASS" signature="Applitest()[pri:0, instance:VisualTest.VisualTest.AppTest@1f59a598]" name="Applitest" duration-ms="37067" started-at="2018-10-05T10:47:58Z" finished-at="2018-10-05T10:48:35Z">
+        <test-method status="PASS" signature="Applitest()[pri:0, instance:VisualTest.VisualTest.AppTest@1f59a598]" name="Applitest" duration-ms="30032" started-at="2018-10-05T10:56:59Z" finished-at="2018-10-05T10:57:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Applitest -->

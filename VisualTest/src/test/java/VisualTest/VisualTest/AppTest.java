@@ -63,7 +63,8 @@ public class AppTest {
 			eyes.checkWindow("Click!");
 
 			// End the test.
-			// eyes.close();
+			eyes.close();
+			
 
 		} finally {
 
